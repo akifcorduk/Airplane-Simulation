@@ -2,11 +2,13 @@ public class Plane implements Movable {
 
     private int id;
 
-    public void move(){
+    @Override
+	public void move(){
 
     }
 
-    public void draw() {
+    @Override
+	public void draw() {
 
     }
 
@@ -17,4 +19,6 @@ public class Plane implements Movable {
     public void takeOff(Track track){
 
     }
+
+
 }
