@@ -1,24 +1,30 @@
-public class Plane implements Movable {
+public class Plane implements Movable, Drawable {
 
-    private int id;
+	private static int lastId = 0;
+	private int id;
 
-    @Override
-	public void move(){
+	public Plane() {
+		int id = ++lastId;
+		System.out.println(id);
+		this.id = id;
+	}
 
-    }
+	@Override
+	public void move() {
 
-    @Override
+	}
+
+	@Override
 	public void draw() {
 
-    }
+	}
 
-    public void land(Track track){
+	public void land(Track track) {
 
-    }
+	}
 
-    public void takeOff(Track track){
+	public void takeOff(Track track) {
 
-    }
-
+	}
 
 }
