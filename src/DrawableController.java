@@ -11,7 +11,11 @@ public class DrawableController extends JPanel {
 
     public DrawableController(Controller controller){
         this.controller = controller;
-        drawables = controller.getTracks();
+        Track track1 = new Track(1);
+        Track track2 = new Track(2);
+        drawables = new Drawable[2];
+        drawables[0] = track1;
+        drawables[1]= track2;
         frame = new JFrame("DrawAirport");
     }
 

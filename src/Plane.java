@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Plane implements Movable, Drawable {
 
 	private static int lastId = 0;
@@ -15,7 +17,7 @@ public class Plane implements Movable, Drawable {
 	}
 
 	@Override
-	public void draw() {
+	public void draw(JFrame frame) {
 
 	}
 

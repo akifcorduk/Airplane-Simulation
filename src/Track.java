@@ -28,6 +28,8 @@ public class Track implements Drawable{
             this.rectangle.setBackground(new Color(252,0,0));
         }
         this.rectangle.setVisible(true);
+        this.rectangle.setEnabled(true);
+
         //frame.add(rectangle);
         frame.repaint();
         frame.getContentPane().add(this.rectangle);

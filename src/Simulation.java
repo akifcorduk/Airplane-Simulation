@@ -19,7 +19,11 @@ public class Simulation {
 	public static void main(String[] args) {
 		List<Track> tracks = createTrackArray();
 
-		new Controller(tracks).takeInput();
+		Controller controller = new Controller(tracks);
+		//controller.takeInput();
+
+		DrawableController dc = new DrawableController(controller);
+		dc.drawGUI();
 	}
 
 }
