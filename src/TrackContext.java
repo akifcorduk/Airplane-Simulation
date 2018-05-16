@@ -1,10 +1,10 @@
 public class TrackContext {
 
-    private TrackState state;
+    private TrackState state ;
 
     public TrackContext() {
 
-        this.state= null;
+        this.state= new AvailableState();
 
     }
 

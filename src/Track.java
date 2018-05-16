@@ -1,23 +1,37 @@
+import javax.swing.*;
+import javax.swing.text.Position;
+import java.awt.*;
+
 public class Track implements Drawable{
 
-    private int ID;
+    private int id;
     private TrackContext context;
+    private DrawRectangle rectangle ;
 
-    public static void main(String[] args) {
-        TrackContext context = new TrackContext();
+    public Track(int i){
+        rectangle = new DrawRectangle(i*40,60,20,150);
+        id = i;
+        context = new TrackContext();
 
-        AvailableState startState = new AvailableState();
-        startState.changeAvailability(context);
-
-        System.out.println(context.getState().toString());
-
-        UnavailableState stopState = new UnavailableState();
-        stopState.changeAvailability(context);
-
-        System.out.println(context.getState().toString());
     }
 
-    public void draw() {
+
+    public void draw(JFrame frame) {
+
+        //frame.remove(rectangle);
+
+        TrackState state =  context.getState();
+        if(state instanceof AvailableState){
+            this.rectangle.setBackground(new Color(0,252,0));
+        }
+        else{
+            this.rectangle.setBackground(new Color(252,0,0));
+        }
+        this.rectangle.setVisible(true);
+        //frame.add(rectangle);
+        frame.repaint();
+        frame.getContentPane().add(this.rectangle);
+
 
     }
 

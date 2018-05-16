@@ -1,12 +1,15 @@
-public class Plane implements Movable {
+import javax.swing.*;
+
+public class Plane implements Movable,Drawable {
 
     private int id;
+
 
     public void move(){
 
     }
 
-    public void draw() {
+    public void draw(JFrame frame) {
 
     }
 

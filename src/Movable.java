@@ -1,5 +1,4 @@
-public interface Movable extends Drawable {
+public interface Movable  {
 
-    void draw();
     void move();
 }

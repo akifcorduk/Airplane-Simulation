@@ -1,4 +1,6 @@
+import javax.swing.*;
+
 public interface Drawable {
 
-    void draw();
+    void draw(JFrame frame);
 }
