@@ -11,7 +11,7 @@ public class Track implements Drawable{
     public Track(int i){
         rectangle = new DrawRectangle(i*40,60,20,150);
         id = i;
-        context = new TrackContext();
+        context = new TrackContext(new AvailableState());
 
     }
 
@@ -20,8 +20,8 @@ public class Track implements Drawable{
 
         //frame.remove(rectangle);
 
-        TrackState state =  context.getState();
-        if(state instanceof AvailableState){
+
+        if(context.getState() instanceof AvailableState){
             this.rectangle.setBackground(new Color(0,252,0));
         }
         else{
