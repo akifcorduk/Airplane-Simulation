@@ -1,26 +1,20 @@
 public class TrackContext {
 
-    private TrackState state ;
+	private TrackState state;
 
-    public TrackContext() {
+	public TrackContext(TrackState state) {
+		this.state = state;
+	}
 
-        this.state= new AvailableState();
+	public void changeAvailability() {
+		state.changeAvailability(this);
+	}
 
-    }
+	public void setState(TrackState state) {
+		this.state = state;
+	}
 
-    public void changeAvailability(TrackState state){
-        setState(state);
-    }
-
-    public void setState(TrackState state) {
-
-        this.state = state;
-
-    }
-
-    public TrackState getState() {
-
-        return state;
-
-    }
+	public TrackState getState() {
+		return state;
+	}
 }

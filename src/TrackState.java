@@ -1,3 +1,5 @@
 public interface TrackState {
-    void changeAvailability(TrackContext context);
+
+	void changeAvailability(TrackContext context);
+
 }

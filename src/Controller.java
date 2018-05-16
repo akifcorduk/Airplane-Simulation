@@ -1,29 +1,31 @@
-public class Controller {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
-    private Plane[] planes;
+public class Controller extends UserInterface {
 
-    public Plane[] getPlanes() {
-        return planes;
-    }
+	private Queue<Plane> landQueue = new ConcurrentLinkedQueue<>();
+	private Queue<Plane> takeOffQueue = new ConcurrentLinkedQueue<>();
+	private List<Track> availableTracks = new ArrayList<>();
 
-    public Track[] getTracks() {
-        return tracks;
-    }
+	public Controller(List<Track> availableTracks) {
+		this.availableTracks = availableTracks;
+	}
 
-    public int getNumberOfTracks() {
-        return numberOfTracks;
-    }
+	@Override
+	public void notifyAddLandingPlane() {
+		Plane plane = new Plane();
+		landQueue.add(plane);
+	}
 
-    private Track[] tracks;
-    private int numberOfTracks;
+	@Override
+	public void notifyAddTakingOffPlane() {
+		Plane plane = new Plane();
+		takeOffQueue.add(plane);
+	}
 
-    public Controller(){
-        numberOfTracks = 3;
-        tracks = new Track[3];
-        for(int i=0 ; i< numberOfTracks ; i++){
-            tracks[i] = new Track(i);
-        }
-    }
-
-
+	public static void main(String args[]) {
+		new Controller(null).takeInput();
+	}
 }
