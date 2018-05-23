@@ -1,3 +1,4 @@
+package state;
 public class TrackContext {
 
 	private TrackState state;
@@ -17,4 +18,11 @@ public class TrackContext {
 	public TrackState getState() {
 		return state;
 	}
+
+	@Override
+	public String toString() {
+		return "TrackContext [state=" + state + "]";
+	}
+
+
 }

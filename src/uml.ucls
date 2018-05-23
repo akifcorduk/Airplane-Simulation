@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="false" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="state.StateUnavailable" project="airplane_simulation" 
+    file="/airplane_simulation/src/state/StateUnavailable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="103" width="208" x="811" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="state.TrackContext" project="airplane_simulation" 
+    file="/airplane_simulation/src/state/TrackContext.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="157" width="150" x="356" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="sim.Plane" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/Plane.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="229" width="127" x="1830" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="sim.observer.controller.TakingOffObserver" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/TakingOffObserver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="188" x="2538" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="sim.observer.controller.UserInterface" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/UserInterface.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="157" width="225" x="546" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="interfaces.Drawable" project="airplane_simulation" 
+    file="/airplane_simulation/src/interfaces/Drawable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="103" x="1593" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="sim.observer.controller.Controller" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="229" width="215" x="2099" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="sim.Simulation" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/Simulation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="121" width="275" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="sim.observer.controller.ControllerObserver" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/ControllerObserver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="135" x="2217" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="sim.observer.track.Track" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/track/Track.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="319" width="246" x="1307" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="sim.observer.track.TrackSubject" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/track/TrackSubject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="85" width="225" x="1307" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="12" language="java" name="sim.observer.controller.LandingSubject" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/LandingSubject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="85" width="225" x="675" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="13" language="java" name="sim.observer.track.TrackObserver" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/track/TrackObserver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="144" x="2354" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="14" language="java" name="interfaces.Movable" project="airplane_simulation" 
+    file="/airplane_simulation/src/interfaces/Movable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="103" x="1736" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="15" language="java" name="sim.DrawingController" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/DrawingController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="103" width="197" x="1593" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="16" language="java" name="sim.observer.controller.TakingOffSubject" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/TakingOffSubject.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="85" width="225" x="410" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="17" language="java" name="sim.observer.controller.LandingObserver" project="airplane_simulation" 
+    file="/airplane_simulation/src/sim/observer/controller/LandingObserver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="180" x="1879" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="18" language="java" name="state.TrackState" project="airplane_simulation" 
+    file="/airplane_simulation/src/state/TrackState.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="67" width="208" x="940" y="396"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" language="java" name="state.StateAvailable" project="airplane_simulation" 
+    file="/airplane_simulation/src/state/StateAvailable.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="103" width="208" x="1059" y="37"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="20">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <realization id="22">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <realization id="24">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="25">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="26">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <realization id="27">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="28">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <realization id="29">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="30">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="17"/>  
+  </realization>  
+  <realization id="31">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="32">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="false" multiplicity="false"/>
+</class-diagram>
