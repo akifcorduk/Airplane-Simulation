@@ -43,31 +43,25 @@ public class Track implements Drawable, TrackSubject {
 	}
 
 	public void land(Plane plane) {
-		drawingController.draw();
-
 		this.plane = plane;
-		context.changeAvailability();
-		plane.land(this);
-
-		drawingController.draw();
-
-		context.changeAvailability();
+		drawingController.draw(); // draw the empty track
+		context.changeAvailability(); // make track unavailable
+		drawingController.draw(); // draw the busy track
+		plane.land(this); // land the plane (wait 1s)
+		context.changeAvailability(); // make track available again
 		notifyAboutTrack();
-
-		drawingController.draw();
+		drawingController.draw(); // draw the empty track again
 	}
 
 	public void takeOff(Plane plane) {
-		drawingController.draw();
-
-		context.changeAvailability();
 		this.plane = plane;
-		plane.land(this);
-
-		drawingController.draw();
-
-		context.changeAvailability();
+		drawingController.draw(); // draw the empty track
+		context.changeAvailability(); // make track unavailable
+		drawingController.draw(); // draw the busy track
+		plane.takeOff(this); // take off the plane (wait 1s)
+		context.changeAvailability(); // make track available again
 		notifyAboutTrack();
+		drawingController.draw(); // draw the empty track again
 
 		drawingController.draw();
 	}
