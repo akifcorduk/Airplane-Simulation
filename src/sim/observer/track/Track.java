@@ -3,13 +3,15 @@ package sim.observer.track;
 import interfaces.Drawable;
 import sim.DrawingController;
 import sim.Plane;
+import sim.Simulation;
 import sim.observer.controller.ControllerObserver;
 import state.StateAvailable;
 import state.TrackContext;
+import sim.observer.controller.TrackFrame;
 
 public class Track implements Drawable, TrackSubject {
 
-	private static int idCounter = 1;
+	private static int idCounter = 0;
 	private int id;
 	private ControllerObserver observer;
 	private TrackContext context;
@@ -25,6 +27,7 @@ public class Track implements Drawable, TrackSubject {
 		return context;
 	}
 
+	/*
 	@Override
 	public void draw() {
 		if (context.getState() instanceof StateAvailable) {
@@ -41,29 +44,59 @@ public class Track implements Drawable, TrackSubject {
 			System.out.println();
 		}
 	}
+	*/
+
+	public void draw(){
+		if (context.getState() instanceof StateAvailable) {
+			TrackFrame frame = drawingController.userInterface;
+			frame.makeAvailable(id);
+		}
+		else{
+			TrackFrame frame = drawingController.userInterface;
+			frame.makeBusy(id);
+		}
+	}
 
 	public void land(Plane plane) {
 		this.plane = plane;
-		drawingController.draw(); // draw the empty track
-		context.changeAvailability(); // make track unavailable
-		drawingController.draw(); // draw the busy track
-		plane.land(this); // land the plane (wait 1s)
-		context.changeAvailability(); // make track available again
-		notifyAboutTrack();
-		drawingController.draw(); // draw the empty track again
+		context.changeAvailability();
+		draw();
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				planeLand(plane);
+				context.changeAvailability();
+				notifyAboutTrack();
+				draw();
+			}
+		}).start();
+
+
 	}
 
 	public void takeOff(Plane plane) {
 		this.plane = plane;
-		drawingController.draw(); // draw the empty track
-		context.changeAvailability(); // make track unavailable
-		drawingController.draw(); // draw the busy track
-		plane.takeOff(this); // take off the plane (wait 1s)
-		context.changeAvailability(); // make track available again
-		notifyAboutTrack();
-		drawingController.draw(); // draw the empty track again
+		context.changeAvailability();
+		draw();
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				planeTakeoff(plane);
+				context.changeAvailability();
+				notifyAboutTrack();
+				draw();
+			}
+		}).start();
 
-		drawingController.draw();
+
+	}
+
+	private void planeTakeoff(Plane plane){
+		plane.takeOff(this);
+	}
+
+	private void planeLand(Plane plane){
+		plane.land(this);
 	}
 
 	@Override

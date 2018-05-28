@@ -19,16 +19,16 @@ public class Controller extends ControllerObserver {
 	private Random random = new Random();
 
 
-	public Controller(List<Track> availableTracks, List<Drawable> elements) {
+	public Controller(List<Track> availableTracks, List<Drawable> elements, TrackFrame frame) {
 		this.availableTracks = availableTracks;
-		DrawingController drawingController = new DrawingController(elements);
+		DrawingController drawingController = new DrawingController(elements,frame);
 		for (Track track : availableTracks ) {
 			track.attachObserver(this);
 			track.setDrawingController(drawingController);
 		}
 
-		drawingController.draw();
-
+		//drawingController.draw();
+		//control();
 		new Thread(new Runnable() {
 			@Override
 			public void run() {

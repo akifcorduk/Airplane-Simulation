@@ -34,8 +34,10 @@ public class Plane implements Movable, Drawable {
 	}
 
 	private void waitSomeTime() {
-		for (int i = 0; i <= 30000000; i++) {
-			System.out.print("");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
 
