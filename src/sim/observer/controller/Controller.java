@@ -39,16 +39,17 @@ public class Controller extends ControllerObserver {
 
 	public void control() {
 		while (true) {
-			if (!availableTracks.isEmpty()) {
+			if (!availableTracks.isEmpty()&&(!landQueue.isEmpty() || !takeOffQueue.isEmpty())) {
+				Track track = getAvailableTrack();
 				if (random.nextBoolean()) { // picking random between queues
 					if (!landQueue.isEmpty()) {
 						Plane plane = landQueue.poll();
-						Track track = getAvailableTrack();
+
 						track.land(plane);
 					}
-					if (!takeOffQueue.isEmpty()) {
+					else if(!takeOffQueue.isEmpty()) {
 						Plane plane = takeOffQueue.poll();
-						Track track = getAvailableTrack();
+						//Track track = getAvailableTrack();
 						track.takeOff(plane);
 					}
 
@@ -56,12 +57,12 @@ public class Controller extends ControllerObserver {
 
 					if (!takeOffQueue.isEmpty()) {
 						Plane plane = takeOffQueue.poll();
-						Track track = getAvailableTrack();
+						//Track track = getAvailableTrack();
 						track.takeOff(plane);
 					}
-					if (!landQueue.isEmpty()) {
+					else if (!landQueue.isEmpty()) {
 						Plane plane = landQueue.poll();
-						Track track = getAvailableTrack();
+						//Track track = getAvailableTrack();
 						track.land(plane);
 					}
 

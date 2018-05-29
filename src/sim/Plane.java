@@ -35,7 +35,7 @@ public class Plane implements Movable, Drawable {
 
 	private void waitSomeTime() {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(6000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
