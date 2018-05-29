@@ -19,9 +19,9 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
     public TrackFrame(){
         super("Track Frame");
 
-        setSize(frameX, frameY);
+
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setVisible(true);
+
         setLayout(new GridLayout(2,1));
 
         JPanelExample p = new JPanelExample();
@@ -56,6 +56,9 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
 
         getContentPane().add(p);
         getContentPane().add(buttonPanel);
+        pack();
+        setSize(frameX, frameY);
+        setVisible(true);
     }
 
     public void makeAvailable(int id){
