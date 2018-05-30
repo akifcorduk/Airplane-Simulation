@@ -1,7 +1,7 @@
 package sim.observer.controller;
 
 import sim.Plane;
-
+import sim.observer.controller.Controller;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,9 +15,11 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
     int frameY = 600;
     ArrayList<MyShape> shapes;
     private ControllerObserver observer;
+    
+    JLabel fieldLand = new JLabel("Number of planes\r waiting to land : "+Controller.getQueueLength("land"));
+    JLabel fieldTakeOff = new JLabel("Number of planes waiting to take off : "+Controller.getQueueLength("takeOff"));
 
     public TrackFrame(){
-        super("Track Frame");
 
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -30,7 +32,6 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
 
         JButton landButton = new JButton("Land");
         landButton.setPreferredSize(new Dimension(100, 100));
-
         landButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 notifyAboutLanding();
@@ -45,6 +46,18 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
             }
         });
 
+        // The Queues //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        add(fieldTakeOff);
+        fieldTakeOff.setSize(10,10);
+        fieldTakeOff.setVisible(true);
+        
+        add(fieldLand);
+        fieldLand.setSize(10,10);
+        fieldLand.setVisible(true);
+        
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
         buttonPanel.add(landButton);
         buttonPanel.add(takeoffButton);
 
@@ -60,27 +73,38 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
         setSize(frameX, frameY);
         setVisible(true);
     }
+    
 
+    
+    
     public void makeAvailable(int id){
         MyShape shape = shapes.get(id);
         shape.shapeColor = Color.GREEN;
         repaint();
+        fieldLand.setText("Number of planes waiting to land : "+Controller.getQueueLength("land"));
+        fieldTakeOff.setText("Number of planes waiting to take off : "+Controller.getQueueLength("takeOff"));
+        
     }
 
     public void makeBusy(int id){
         MyShape shape = shapes.get(id);
         shape.shapeColor = Color.RED;
         repaint();
+        fieldLand.setText("Number of planes waiting to land : "+Controller.getQueueLength("land"));
+        fieldTakeOff.setText("Number of planes waiting to take off : "+Controller.getQueueLength("takeOff"));
     }
 
     @Override
     public void notifyAboutLanding() {
         observer.updateLandingPlane(new Plane());
+        fieldLand.setText("Number of planes waiting to land : "+Controller.getQueueLength("land"));
     }
+    
 
     @Override
     public void notifyAboutTakingOff() {
         observer.updateTakingOffPlane(new Plane());
+        fieldTakeOff.setText("Number of planes waiting to take off : "+Controller.getQueueLength("takeOff"));
     }
 
     @Override
@@ -89,6 +113,7 @@ public class TrackFrame extends JFrame implements LandingSubject, TakingOffSubje
     }
 
 
+    
 }
 
 
