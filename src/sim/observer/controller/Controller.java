@@ -13,8 +13,8 @@ import sim.observer.track.Track;
 
 public class Controller extends ControllerObserver {
 
-	private static Queue<Plane> landQueue = new ConcurrentLinkedQueue<>();
-	private static Queue<Plane> takeOffQueue = new ConcurrentLinkedQueue<>();
+	private Queue<Plane> landQueue = new ConcurrentLinkedQueue<>();
+	private Queue<Plane> takeOffQueue = new ConcurrentLinkedQueue<>();
 	private List<Track> availableTracks = new ArrayList<>();
 	private Random random = new Random();
 
@@ -91,19 +91,6 @@ public class Controller extends ControllerObserver {
 	@Override
 	public void updateLandingPlane(Plane plane) {
 		landQueue.add(plane);
-	}
-	
-	
-	public static int getQueueLength(String queue) {
-		if (queue == "takeOff") {
-			return takeOffQueue.size();
-		}
-		if (queue == "land") {
-			return landQueue.size();
-		}
-		else {
-			return 666;
-		}
 	}
 
 }
