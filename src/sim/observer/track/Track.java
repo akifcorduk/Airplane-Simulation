@@ -60,14 +60,24 @@ public class Track implements Drawable, TrackSubject {
 	public void land(Plane plane) {
 		this.plane = plane;
 		context.changeAvailability();
+		if(context.getState() instanceof StateAvailable){
+			System.out.println("Available " + id);
+		}
 		draw();
+
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				planeLand(plane);
 				context.changeAvailability();
-				notifyAboutTrack();
 				draw();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				notifyAboutTrack();
+
 			}
 		}).start();
 

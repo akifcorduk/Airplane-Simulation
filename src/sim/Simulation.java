@@ -1,12 +1,10 @@
 package sim;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import interfaces.Drawable;
 import sim.observer.controller.Controller;
 import sim.observer.controller.TrackFrame;
-import sim.observer.controller.UserInterface;
 import sim.observer.track.Track;
 
 import javax.swing.*;
